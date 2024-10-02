@@ -1,9 +1,10 @@
 #include <iostream>
 #include "app_info.hpp"
+#include "spdlog/spdlog.h"
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << "App name: " << app_info::AppInfo() << std::endl;
+    SPDLOG_INFO("Hello, World!");
+    SPDLOG_INFO("App name: {}", app_info::AppInfo());
     return 0;
 }

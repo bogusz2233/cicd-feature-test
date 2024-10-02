@@ -9,3 +9,11 @@ target_link_directories(
     PRIVATE
     ${CMAKE_SOURCE_DIR}
 )
+
+enable_library(${SPDLOG_LIBRARY_NAME})
+
+target_link_libraries(
+    ${PROJECT_NAME}
+    PRIVATE
+    spdlog::spdlog
+)
